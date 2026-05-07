@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
@@ -63,14 +61,6 @@ export default function Hero() {
                 place.
               </p>
 
-              <div className="mt-6">
-                <Link
-                  href="/auth/signup"
-                  className="inline-flex items-center gap-3 rounded-full bg-yellow-400 px-6 py-3 text-sm font-bold text-black"
-                >
-                  $10k Bonus
-                </Link>
-              </div>
             </div>
 
             <div className="absolute bottom-0 right-4 h-full md:w-[50%] lg:w-[50%]">

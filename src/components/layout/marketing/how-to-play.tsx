@@ -15,7 +15,6 @@ import chime from "../../../../public/assets/SVGs/chime.svg";
 import paypal from "../../../../public/assets/SVGs/paypal.svg";
 import pau from "../../../../public/assets/SVGs/pay.jpg";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
 
 const payments = [visa, mastercard, s, chime, paypal, pau];
 
@@ -40,26 +39,22 @@ export default function HowToPlayUI() {
           >
             <NumberBadge n={1} />
 
-            <h3 className="text-2xl font-bold text-white">Bonus & Rewards</h3>
+            <h3 className="text-2xl font-bold text-white">Game Access</h3>
 
             <div className="mt-6 space-y-4">
               <div className="flex items-center justify-between text-lg font-semibold text-amber-300">
-                $10 Signup bonus
+                Browse supported games
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-amber-400 text-black font-black">
                   G
                 </span>
               </div>
               <Separator />
               <div className="flex items-center justify-between text-lg font-semibold text-emerald-300">
-                $10 Referral Bonus
+                Choose your preferred title
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-emerald-500 text-black font-black">
                   S
                 </span>
               </div>
-            </div>
-
-            <div className="mt-8 w-fit rounded-full bg-emerald-400 px-6 py-3 font-bold text-black hover:bg-emerald-300 transition">
-              <Link href="/auth/signup">Signup Now</Link>
             </div>
 
             {/* Floating Art */}
@@ -111,9 +106,6 @@ export default function HowToPlayUI() {
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="mt-10 w-full flex justify-center rounded-full bg-emerald-400 py-4 text-lg font-bold text-black hover:bg-emerald-300 transition">
-              <Link href="/auth/signup">Redeem</Link>
             </div>
           </div>
         </div>

@@ -54,7 +54,6 @@ export default function Header() {
 
           {/* RIGHT (desktop only) */}
           <div className="flex-1 hidden md:flex items-center justify-end gap-3">
-            <AuthButtons />
           </div>
 
           {/* spacer to balance mobile layout */}
@@ -75,8 +74,6 @@ export default function Header() {
             </NavItem> */}
 
             <div className="h-px bg-white/10 my-2" />
-
-            <AuthButtons mobile />
           </div>
         )}
       </div>
@@ -115,22 +112,3 @@ function NavItem({
   );
 }
 
-function AuthButtons({ mobile = false }: { mobile?: boolean }) {
-  return (
-    <div className={cn("flex gap-3", mobile ? "flex-col" : "items-center")}>
-      <Link
-        href="/auth/signin"
-        className="rounded-full bg-yellow-400 px-6 py-2 text-sm font-semibold text-black hover:bg-yellow-300 transition text-center"
-      >
-        Login
-      </Link>
-
-      <Link
-        href="/auth/signup"
-        className="rounded-full bg-yellow-400 px-6 py-2 text-sm font-semibold text-black hover:bg-yellow-300 transition text-center"
-      >
-        Sign up
-      </Link>
-    </div>
-  );
-}

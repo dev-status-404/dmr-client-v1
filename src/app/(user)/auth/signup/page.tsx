@@ -2,7 +2,6 @@
 
 import AuthShell from "@/components/layout/auth/auth-shell";
 import AuthCard from "@/components/layout/auth/auth-card";
-import GoogleButton from "@/components/layout/auth/google-button";
 import SignUpForm from "@/features/auth/signup/form";
 
 export default function SignUpPage() {
@@ -10,9 +9,9 @@ export default function SignUpPage() {
     <AuthShell>
       <AuthCard>
         <p className="text-sm text-muted-foreground dark:text-white/70">Create your account</p>
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight">Sign Up</h1>
+        <h1 className="mt-2 text-4xl font-semibold tracking-tight">Create Account</h1>
         <p className="mt-3 text-sm text-muted-foreground dark:text-white/70">
-          Join thousands of players and start winning.
+          Set up your player profile.
         </p>
 
         {/* <div className="mt-6 space-y-3">

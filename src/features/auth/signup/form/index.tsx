@@ -108,7 +108,7 @@ export default function SignUpForm() {
           className="text-amber-500 hover:underline dark:text-amber-300"
           href="/auth/signin"
         >
-          Sign in
+          Continue
         </Link>
       </p>
     </form>

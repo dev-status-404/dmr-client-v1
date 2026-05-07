@@ -1,23 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Insights from "./insights";
 import SectionTitle from "@/components/common/section-title";
 import { GlobalDataTable } from "@/components/common/global-table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Spinner } from "@/components/ui/spinner";
 import { useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
 
 import { useDashboard } from "@/hooks/dashboard";
 import { useUserInfo } from "@/helpers/use-user";
@@ -32,9 +24,6 @@ import {
   RefreshCw,
   Hash,
   Gamepad2,
-  Gift,
-  Copy,
-  ExternalLink,
 } from "lucide-react";
 
 type TxRow = {
@@ -192,8 +181,6 @@ const filterRows = (
 export default function Dashboard() {
   const { id } = useUserInfo();
   const queryClient = useQueryClient();
-  const [isReferralOpen, setIsReferralOpen] = useState(false);
-  const [origin, setOrigin] = useState("https://demo.lukesweeps.com");
 
   const [filters, setFilters] = useState<{
     date: DateFilter;
@@ -209,13 +196,7 @@ export default function Dashboard() {
 
   const [applied, setApplied] = useState(filters);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setOrigin(window.location.origin);
-    }
-  }, []);
-
-  const apply = () => setApplied(filters);
+  const filterResults = () => setApplied(filters);
 
   const reset = () => {
     const cleared = {
@@ -261,16 +242,6 @@ export default function Dashboard() {
 
   const { data, isLoading, isFetching } = useDashboard(serverParams);
 
-  const referralCode = useMemo(() => {
-    const rawId = String(id ?? "demo-user").trim();
-    return rawId ? `friend-${rawId.slice(0, 8)}` : "friend-demo";
-  }, [id]);
-
-  const referralUrl = useMemo(() => {
-    const base = origin.replace(/\/$/, "");
-    return `${base}/auth/signup?ref=${encodeURIComponent(referralCode)}&demo=1`;
-  }, [origin, referralCode]);
-
   const totals = data?.totals ?? {
     totalDeposits: 0,
     totalWithdraws: 0,
@@ -290,15 +261,6 @@ export default function Dashboard() {
     [withdraws, applied],
   );
 
-  const copyReferralUrl = async () => {
-    try {
-      await navigator.clipboard.writeText(referralUrl);
-      toast.success("Referral demo URL copied.");
-    } catch {
-      toast.error("Unable to copy the referral URL.");
-    }
-  };
-
   if (isLoading) {
     return (
       <div className="p-10 h-full text-slate-900 dark:text-white flex items-center justify-center">
@@ -314,14 +276,6 @@ export default function Dashboard() {
 
         <div className="flex items-center gap-2">
           <Button
-            className="rounded-2xl"
-            onClick={() => setIsReferralOpen(true)}
-          >
-            <Gift className="mr-2 size-4" />
-            Refer a Friend
-          </Button>
-
-          <Button
             variant="secondary"
             className="rounded-2xl"
             onClick={() =>
@@ -336,63 +290,6 @@ export default function Dashboard() {
           </Button>
         </div>
       </div>
-
-      <Dialog open={isReferralOpen} onOpenChange={setIsReferralOpen}>
-        <DialogContent className="border-slate-200 bg-white text-slate-900 dark:border-white/10 dark:bg-card dark:text-white">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <Gift className="size-5" />
-              Refer a Friend
-            </DialogTitle>
-            <DialogDescription className="text-slate-600 dark:text-white/60">
-              Share this demo signup URL with a friend. It points to the signup
-              page with a sample referral code.
-            </DialogDescription>
-          </DialogHeader>
-
-          <div className="space-y-3">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-white/5">
-              <div className="mb-2 flex items-center justify-between gap-3">
-                <Label className="text-slate-700 dark:text-white/80">
-                  Demo referral URL
-                </Label>
-                <Badge variant="secondary" className="rounded-xl">
-                  {referralCode}
-                </Badge>
-              </div>
-
-              <Input
-                value={referralUrl}
-                readOnly
-                className="font-mono text-xs sm:text-sm"
-              />
-
-              <p className="mt-2 text-xs text-slate-500 dark:text-white/50">
-                Friends can use this link to open signup with the demo referral
-                attached.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
-              <Button
-                variant="secondary"
-                className="rounded-2xl"
-                onClick={copyReferralUrl}
-              >
-                <Copy className="mr-2 size-4" />
-                Copy Link
-              </Button>
-
-              <Button asChild className="rounded-2xl">
-                <a href={referralUrl} target="_blank" rel="noreferrer">
-                  <ExternalLink className="mr-2 size-4" />
-                  Open Signup
-                </a>
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
 
       <Insights totals={totals} />
 
@@ -506,8 +403,8 @@ export default function Dashboard() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
-            <Button onClick={apply} disabled={!hasDraftChanges}>
-              Apply
+            <Button onClick={filterResults} disabled={!hasDraftChanges}>
+              Filter
             </Button>
 
             <Button

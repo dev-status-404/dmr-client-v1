@@ -18,8 +18,6 @@ const aboutLinks = [
 const featureLinks = [
   { label: "Casino", href: "/" },
   { label: "Sweepstakes Games", href: "/" },
-  { label: "VIP Rewards", href: "/" },
-  { label: "Refer a Friend", href: "/auth/signup" },
 ];
 
 const socialLinks = [
@@ -46,7 +44,7 @@ export default function Footer() {
 
           <p className="max-w-xs text-lg font-medium leading-relaxed text-muted-foreground">
             Your premier destination for sweepstakes casino entertainment. Play
-            top games and win real prizes.
+            top games in one polished place.
           </p>
 
           <div>
