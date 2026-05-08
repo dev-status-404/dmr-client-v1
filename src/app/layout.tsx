@@ -41,6 +41,17 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '4373831016234686');
 fbq('track', 'PageView');`}
         </Script>
+        <Script id="tawk-to" strategy="afterInteractive">
+          {`var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69fdfb14fd13b11c33e8727e/1jo41pi2l';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();`}
+        </Script>
         <noscript>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

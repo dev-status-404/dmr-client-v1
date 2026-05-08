@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { LogIn, Menu, UserPlus, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import LOGO from "../../../public/assets/SVGs/luke/hat.svg";
@@ -54,6 +54,14 @@ export default function Header() {
 
           {/* RIGHT (desktop only) */}
           <div className="flex-1 hidden md:flex items-center justify-end gap-3">
+            <AuthButton href="/auth/signin" variant="ghost">
+              <LogIn className="h-4 w-4" />
+              Sign In
+            </AuthButton>
+            <AuthButton href="/auth/signup" variant="primary">
+              <UserPlus className="h-4 w-4" />
+              Sign Up
+            </AuthButton>
           </div>
 
           {/* spacer to balance mobile layout */}
@@ -74,6 +82,17 @@ export default function Header() {
             </NavItem> */}
 
             <div className="h-px bg-white/10 my-2" />
+
+            <div className="grid gap-3">
+              <AuthButton href="/auth/signin" variant="ghost" mobile>
+                <LogIn className="h-4 w-4" />
+                Sign In
+              </AuthButton>
+              <AuthButton href="/auth/signup" variant="primary" mobile>
+                <UserPlus className="h-4 w-4" />
+                Sign Up
+              </AuthButton>
+            </div>
           </div>
         )}
       </div>
@@ -82,6 +101,33 @@ export default function Header() {
 }
 
 /* ================= Components ================= */
+
+function AuthButton({
+  href,
+  children,
+  variant,
+  mobile = false,
+}: {
+  href: string;
+  children: React.ReactNode;
+  variant: "primary" | "ghost";
+  mobile?: boolean;
+}) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "inline-flex items-center justify-center gap-2 font-semibold transition",
+        mobile ? "h-12 rounded-xl px-4 text-base" : "h-10 rounded-full px-5 text-sm",
+        variant === "primary"
+          ? "bg-yellow-400 text-black shadow-[0_6px_20px_rgba(255,215,0,0.35)] hover:bg-yellow-300"
+          : "border border-yellow-400/40 bg-zinc-950/60 text-yellow-300 hover:border-yellow-300 hover:bg-yellow-400/10 hover:text-yellow-200",
+      )}
+    >
+      {children}
+    </Link>
+  );
+}
 
 function NavItem({
   href,
