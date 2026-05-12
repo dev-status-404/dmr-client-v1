@@ -56,7 +56,7 @@ const sections = [
   },
   {
     title: "3. Sweepstakes Model Compliance",
-    body: "Diamond High Roller operates under a promotional sweepstakes model:",
+    body: "Monaco Gameroom operates under a promotional sweepstakes model:",
     items: [
       "No purchase is necessary to participate",
       "Purchasing Gold Coins does not increase chances of winning",
@@ -102,7 +102,7 @@ const sections = [
       "Opt out of communications",
     ],
     closing:
-      "To exercise these rights, contact us at support@diamondhighroller.com.",
+      "To exercise these rights, contact us at support@monacogameroom.com.",
   },
   {
     title: "8. Data Retention",
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       <p className="mb-8 text-foreground/90">
-        Diamond High Roller, operated by Earthwalk Holdings LLC, respects your
+        Monaco Gameroom, operated by Earthwalk Holdings LLC, respects your
         privacy and is committed to protecting your personal information. This
         Privacy Policy explains how we collect, use, disclose, and safeguard
         your information when you access or use our website and services.
@@ -189,21 +189,21 @@ export default function PrivacyPolicyPage() {
           <p>
             Email:{" "}
             <a
-              href="mailto:support@diamondhighroller.com"
+              href="mailto:support@monacogameroom.com"
               className="text-primary hover:underline"
             >
-              support@diamondhighroller.com
+              support@monacogameroom.com
             </a>
           </p>
           <p>
             Website:{" "}
             <a
-              href="https://diamondhighroller.com"
+              href="https://monacogameroom.com"
               className="text-primary hover:underline"
               target="_blank"
               rel="noreferrer"
             >
-              https://diamondhighroller.com
+              https://monacogameroom.com
             </a>
           </p>
         </div>

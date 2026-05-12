@@ -61,7 +61,7 @@ export default function ContactPage() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
         <p className="text-muted-foreground text-lg">
-          Have a question or need assistance with Diamond High Roller? We're here
+          Have a question or need assistance with Monaco Gameroom? We're here
           to help.
         </p>
       </div>
@@ -86,16 +86,16 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
                 <a
-                  href="mailto:support@diamondhighroller.com"
+                  href="mailto:support@monacogameroom.com"
                   className="block text-sm text-muted-foreground transition hover:text-primary"
                 >
-                  support@diamondhighroller.com
+                  support@monacogameroom.com
                 </a>
                 <a
-                  href="mailto:contact@diamondhighroller.com"
+                  href="mailto:contact@monacogameroom.com"
                   className="block text-sm text-muted-foreground transition hover:text-primary"
                 >
-                  contact@diamondhighroller.com
+                  contact@monacogameroom.com
                 </a>
               </div>
             </div>
@@ -107,12 +107,12 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold mb-1">Website</h3>
                 <a
-                  href="https://diamondhighroller.com"
+                  href="https://monacogameroom.com"
                   target="_blank"
                   rel="noreferrer"
                   className="text-sm text-muted-foreground transition hover:text-primary"
                 >
-                  https://diamondhighroller.com
+                  https://monacogameroom.com
                 </a>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
               </div>
               <div className="flex justify-between">
                 <span>Email Support:</span>
-                <span className="font-medium">support@diamondhighroller.com</span>
+                <span className="font-medium">support@monacogameroom.com</span>
               </div>
             </div>
           </div>

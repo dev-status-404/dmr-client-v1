@@ -1,7 +1,7 @@
 const sections = [
   {
     title: "1. Entertainment-Only Platform",
-    body: "Diamond High Roller is designed for entertainment purposes only.",
+    body: "Monaco Gameroom is designed for entertainment purposes only.",
     items: [
       "Gold Coins have no monetary value",
       "Sweeps Coins are provided through promotional methods",
@@ -51,7 +51,7 @@ const sections = [
       "You will not be able to access gameplay features",
       "The restriction cannot be reversed until the selected period ends",
     ],
-    closing: "To request self-exclusion, contact support@diamondhighroller.com.",
+    closing: "To request self-exclusion, contact support@monacogameroom.com.",
   },
   {
     title: "6. Behavior Monitoring",
@@ -104,10 +104,10 @@ export default function ResponsiblePlayPolicyPage() {
   return (
     <main className="max-w-4xl mx-auto py-20 px-6">
       <h1 className="text-4xl font-bold mb-4">Responsible Play Policy</h1>
-      <p className="text-lg font-semibold mb-6">Diamond High Roller</p>
+      <p className="text-lg font-semibold mb-6">Monaco Gameroom</p>
 
       <p className="mb-8 text-foreground/90">
-        Diamond High Roller is committed to providing a safe, enjoyable, and
+        Monaco Gameroom is committed to providing a safe, enjoyable, and
         responsible entertainment experience for all users. While our platform
         operates as a promotional sweepstakes and social gaming environment, we
         encourage all users to engage responsibly and maintain control over
@@ -138,21 +138,21 @@ export default function ResponsiblePlayPolicyPage() {
           <p>
             Email:{" "}
             <a
-              href="mailto:support@diamondhighroller.com"
+              href="mailto:support@monacogameroom.com"
               className="text-primary hover:underline"
             >
-              support@diamondhighroller.com
+              support@monacogameroom.com
             </a>
           </p>
           <p>
             Website:{" "}
             <a
-              href="https://diamondhighroller.com"
+              href="https://monacogameroom.com"
               className="text-primary hover:underline"
               target="_blank"
               rel="noreferrer"
             >
-              https://diamondhighroller.com
+              https://monacogameroom.com
             </a>
           </p>
         </div>

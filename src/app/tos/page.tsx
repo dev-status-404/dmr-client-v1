@@ -9,7 +9,7 @@ const sections = [
   },
   {
     title: "2. Nature of the Services (IMPORTANT)",
-    body: "Diamond High Roller operates a promotional sweepstakes platform for entertainment purposes only. The platform uses a dual-currency system:",
+    body: "Monaco Gameroom operates a promotional sweepstakes platform for entertainment purposes only. The platform uses a dual-currency system:",
     items: [
       "Gold Coins are used for gameplay only and have no monetary value",
       "Sweeps Coins are promotional entries that may be redeemed for prizes, subject to rules",
@@ -142,7 +142,7 @@ export default function TermsOfServicePage() {
 
       <p className="mb-8 text-foreground/90">
         These Terms of Service (&quot;Terms&quot;) govern your access to and use
-        of the website and services provided by Diamond High Roller, operated by
+        of the website and services provided by Monaco Gameroom, operated by
         Earthwalk Holdings LLC (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;,
         or &quot;us&quot;). By accessing or using our platform, you agree to be
         bound by these Terms.
@@ -185,21 +185,21 @@ export default function TermsOfServicePage() {
           <p>
             Email:{" "}
             <a
-              href="mailto:support@diamondhighroller.com"
+              href="mailto:support@monacogameroom.com"
               className="text-primary hover:underline"
             >
-              support@diamondhighroller.com
+              support@monacogameroom.com
             </a>
           </p>
           <p>
             Website:{" "}
             <a
-              href="https://diamondhighroller.com"
+              href="https://monacogameroom.com"
               className="text-primary hover:underline"
               target="_blank"
               rel="noreferrer"
             >
-              https://diamondhighroller.com
+              https://monacogameroom.com
             </a>
           </p>
         </div>

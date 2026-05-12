@@ -116,7 +116,7 @@ export default function SignInForm() {
         disabled={signInMutation.isPending}
         className="w-full bg-emerald-400 text-black hover:bg-emerald-300"
       >
-        Continue
+        Sign In
       </Button>
 
       <p className="text-center text-sm text-muted-foreground dark:text-white/70">
@@ -125,7 +125,7 @@ export default function SignInForm() {
           className="text-amber-500 hover:underline dark:text-amber-300"
           href="/auth/signup"
         >
-          Create account
+          Sign up
         </Link>
       </p>
     </form>

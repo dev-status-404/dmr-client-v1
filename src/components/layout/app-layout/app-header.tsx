@@ -22,7 +22,7 @@ import { useAppDispatch } from "@/redux/hook";
 import { Button } from "@/components/ui/button";
 import { logoutUser } from "@/redux/slices/user";
 import { useRouter } from "next/navigation";
-import LOGO from "../../../../public/assets/SVGs/luke/hat.png";
+import LOGO from "../../../../public/assets/SVGs/logo.svg";
 import { useNotificationsSummary } from "@/hooks/notifications";
 
 type NavItem = {
@@ -115,17 +115,17 @@ const AppHeader = () => {
               {/* If you don't have a file, remove Image and use text */}
               <Image
                 src={LOGO}
-                alt="Logo"
+                alt="DiamondHighRoller logo"
                 className="object-contain p-1 !rounded-full"
                 priority
               />
             </div>
             <div className="hidden sm:block">
               <div className="text-lg font-extrabold tracking-tight text-black/90">
-                Diamond High Roller
+                DiamondHighRoller
               </div>
               <div className="text-xs font-medium text-black/50">
-                Player Hub
+                Dashboard
               </div>
             </div>
           </Link>

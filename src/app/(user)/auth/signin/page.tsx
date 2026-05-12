@@ -1,6 +1,7 @@
 "use client";
 import AuthShell from "@/components/layout/auth/auth-shell";
 import AuthCard from "@/components/layout/auth/auth-card";
+import GoogleButton from "@/components/layout/auth/google-button";
 import SignInForm from "@/features/auth/signin/form";
 
 
@@ -9,9 +10,9 @@ export default function SignInPage() {
     <AuthShell>
       <AuthCard>
         <p className="text-sm text-muted-foreground dark:text-white/70">Welcome back</p>
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight">Account Access</h1>
+        <h1 className="mt-2 text-4xl font-semibold tracking-tight">Sign In</h1>
         <p className="mt-3 text-sm text-muted-foreground dark:text-white/70">
-          Access your dashboard and redeem history.
+          Access your dashboard, rewards, and instant redeem.
         </p>
 
         <div className="mt-6 space-y-3">
